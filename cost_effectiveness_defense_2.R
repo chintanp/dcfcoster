@@ -95,7 +95,7 @@ count_stats <- count_stats %>% dplyr::mutate(new_up_plug_count =
   ))
 
 count_stats_set_avg <-
-  count_stats %>% dplyr::group_by(new_up_plug_count) %>% dplyr::summarise(mean_evmt = mean(evmt))
+  count_stats %>% dplyr::group_by(new_up_plug_count) %>% dplyr::summarise(mean_evmt = mean(evmt), mean_wait_duration = mean(wait_duration))
 
 count_stats_set_avg$delta_evmt <-
   count_stats_set_avg$mean_evmt - count_stats_set_avg$mean_evmt[count_stats_set_avg$new_up_plug_count == 0]
