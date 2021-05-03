@@ -211,8 +211,6 @@ x_labels <-
     "New - 2 with 10 chargers"
   )
 
-xform <- list(categoryorder = "array",
-              categoryarray = df$V1)
 
 fig <-
   plotly::plot_ly(
@@ -234,7 +232,11 @@ fig
 fig <-
   fig %>% plotly::layout(
     title = "Cost effectiveness of new/upgrade for various cases",
-    xaxis = list(title = "Description", categoryorder = "array", type = 'category', categoryarray = x_labels),
-    yaxis = list(title = "Cost Effectiveness (in evmt/k$)")
+    xaxis = list(title = "Scenario Description", categoryorder = "array", type = 'category', categoryarray = x_labels),
+    yaxis = list(title = "Cost Effectiveness (in evmt/k$)"),
+    width = 800,
+    height = 400,
+    template='plotly_white'
+
   )
 fig

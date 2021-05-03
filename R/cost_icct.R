@@ -76,7 +76,7 @@ dcfc_cost <- function(type = "new",
   } else if ((3 <= total_plug_count) & (total_plug_count <= 5)) {
     total_cost <- 26964 * new_plug_count
   } else if ((6 <= total_plug_count) & (total_plug_count <= 50)) {
-    total_cost <- 17692 * new_plug_count
+    total_cost <- 22470 * new_plug_count
   } else if (total_plug_count > 50) {
     lg$log(level = "fatal",
            msg = "Total plug count higher than 50 is not supported currently.",
